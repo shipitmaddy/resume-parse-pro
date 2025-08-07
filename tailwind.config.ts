@@ -63,6 +63,24 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-premium': 'var(--gradient-premium)',
+				'gradient-soft': 'var(--gradient-soft)',
+				'gradient-accent': 'var(--gradient-accent)'
+			},
+			boxShadow: {
+				'premium': 'var(--shadow-premium)',
+				'accent': 'var(--shadow-accent)',
+				'card': 'var(--shadow-card)'
+			},
+			transitionTimingFunction: {
+				'premium': 'var(--transition-premium)',
+				'bounce': 'var(--transition-bounce)'
+			},
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Consolas', 'monospace']
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
