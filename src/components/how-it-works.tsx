@@ -29,24 +29,24 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-soft">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-inter mb-6">
+    <section className="py-16 sm:py-24 bg-gradient-soft">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-inter mb-4 sm:mb-6">
             How It
             <span className="block bg-gradient-accent bg-clip-text text-transparent">
               Works
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Four simple steps to transform your resume into a complete, structured profile
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div key={index} className="text-center group">
-              <div className="relative mb-8">
+              <div className="relative mb-6 sm:mb-8">
                 <div className="w-20 h-20 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-accent transition-all duration-300 group-hover:scale-110">
                   <step.icon className="h-10 w-10 text-accent-foreground" />
                 </div>
@@ -59,10 +59,10 @@ export const HowItWorks = () => {
                   </div>
                 )}
               </div>
-              <h3 className="text-xl font-semibold font-inter mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold font-inter mb-3">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 {step.description}
               </p>
             </div>

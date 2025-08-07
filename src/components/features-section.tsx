@@ -35,26 +35,27 @@ export const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-inter mb-6">
+    <section className="py-16 sm:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-inter mb-4 sm:mb-6">
             Why Choose
             <span className="block bg-gradient-accent bg-clip-text text-transparent">
               ResumeSync?
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Transform your job application process with AI-powered resume parsing 
             that understands the nuances of professional documents.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-card border border-border hover:shadow-card transition-all duration-300 hover:transform hover:-translate-y-1"
+              className="group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:shadow-card transition-all duration-500 hover:transform hover:-translate-y-2 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-accent transition-all duration-300">
                 <feature.icon className="h-8 w-8 text-accent-foreground" />
