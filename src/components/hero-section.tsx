@@ -28,11 +28,21 @@ export const HeroSection = () => {
           <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
             <span className="font-bold text-accent-foreground">R</span>
           </div>
-          <span className="text-xl font-bold font-inter">ResumeSync</span>
+          <span className="text-xl font-bold">ResumeSync</span>
         </div>
-        <Button variant="ghost" className="font-medium">
-          Sign In
-        </Button>
+        <div className="flex items-center space-x-3">
+          <Button variant="ghost" className="hidden sm:flex">
+            Sign In
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm"
+            onClick={() => navigate("/profile")}
+            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+          >
+            View Demo
+          </Button>
+        </div>
       </nav>
 
       {/* Hero Content */}
