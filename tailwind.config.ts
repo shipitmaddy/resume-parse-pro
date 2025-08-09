@@ -66,18 +66,23 @@ export default {
 			backgroundImage: {
 				'gradient-premium': 'var(--gradient-premium)',
 				'gradient-soft': 'var(--gradient-soft)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-shine': 'var(--gradient-shine)',
+				'gradient-border': 'var(--gradient-border)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
 				'accent': 'var(--shadow-accent)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'glow': 'var(--shadow-glow)'
 			},
 			transitionTimingFunction: {
 				'premium': 'var(--transition-premium)',
-				'bounce': 'var(--transition-bounce)'
+				'bounce': 'var(--transition-bounce)',
+				'shine': 'var(--transition-shine)'
 			},
 			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
 				'inter': ['Inter', 'system-ui', 'sans-serif'],
 				'mono': ['JetBrains Mono', 'Consolas', 'monospace']
 			},

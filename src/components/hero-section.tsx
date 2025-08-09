@@ -21,24 +21,25 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-soft overflow-hidden">
+    <div className="min-h-screen bg-gradient-premium overflow-hidden relative">
+      <div className="absolute inset-0 bg-gradient-shine opacity-30"></div>
       {/* Navigation */}
-      <nav className="flex items-center justify-between p-4 sm:p-6 lg:px-12 animate-fade-in">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-            <span className="font-bold text-accent-foreground">R</span>
-          </div>
-          <span className="text-xl font-bold">ResumeSync</span>
-        </div>
+      <nav className="relative z-10 flex items-center justify-between p-4 sm:p-6 lg:px-12 animate-fade-in border-b border-border backdrop-blur-sm">
         <div className="flex items-center space-x-3">
-          <Button variant="ghost" className="hidden sm:flex">
+          <div className="w-10 h-10 bg-gradient-accent rounded-xl flex items-center justify-center shadow-glow">
+            <span className="font-bold text-accent-foreground font-playfair text-lg">R</span>
+          </div>
+          <span className="text-2xl font-bold font-playfair tracking-tight">ResumeSync</span>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Button variant="ghost" className="hidden sm:flex font-inter font-medium hover:bg-secondary/50 transition-shine">
             Sign In
           </Button>
           <Button 
             variant="outline" 
             size="sm"
             onClick={() => navigate("/profile")}
-            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-accent font-inter font-semibold transition-shine"
           >
             View Demo
           </Button>
@@ -46,65 +47,66 @@ export const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-12 pb-16 sm:pb-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-20 pb-20 sm:pb-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-inter leading-tight">
+          <div className="space-y-8 sm:space-y-10 animate-fade-in-up">
+            <div className="space-y-6 sm:space-y-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-playfair leading-[1.1] tracking-tight">
                 Transform Your
-                <span className="block bg-gradient-accent bg-clip-text text-transparent">
+                <span className="block bg-gradient-accent bg-clip-text text-transparent drop-shadow-lg">
                   Resume Into
                 </span>
-                Complete Profile
+                <span className="block text-foreground">Complete Profile</span>
               </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed font-inter font-light max-w-xl">
                 Our AI instantly extracts and structures all your information from PDF or DOCX resumes. 
                 Complete your job application profile in minutes, not hours.
               </p>
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:shadow-accent transition-all duration-300">
-                  <Zap className="h-6 w-6 text-accent-foreground" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+              <div className="text-center group hover:scale-110 transition-all duration-500 ease-bounce">
+                <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-500 shadow-card border border-border/20">
+                  <Zap className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="font-semibold font-inter">Instant</h3>
-                <p className="text-sm text-muted-foreground">Seconds to parse</p>
+                <h3 className="font-bold font-playfair text-lg">Instant</h3>
+                <p className="text-muted-foreground font-inter">Seconds to parse</p>
               </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:shadow-accent transition-all duration-300">
-                  <Shield className="h-6 w-6 text-accent-foreground" />
+              <div className="text-center group hover:scale-110 transition-all duration-500 ease-bounce">
+                <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-500 shadow-card border border-border/20">
+                  <Shield className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="font-semibold font-inter">Secure</h3>
-                <p className="text-sm text-muted-foreground">Privacy first</p>
+                <h3 className="font-bold font-playfair text-lg">Secure</h3>
+                <p className="text-muted-foreground font-inter">Privacy first</p>
               </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:shadow-accent transition-all duration-300">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
+              <div className="text-center group hover:scale-110 transition-all duration-500 ease-bounce">
+                <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-500 shadow-card border border-border/20">
+                  <Clock className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="font-semibold font-inter">Smart</h3>
-                <p className="text-sm text-muted-foreground">AI powered</p>
+                <h3 className="font-bold font-playfair text-lg">Smart</h3>
+                <p className="text-muted-foreground font-inter">AI powered</p>
               </div>
             </div>
 
             {/* Upload Zone */}
             <UploadZone onFileSelect={handleFileSelect} isUploading={isUploading} />
             
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <CheckCircle className="h-4 w-4 text-accent-foreground" />
-              <span>Free to try • No signup required • Instant results</span>
+            <div className="flex items-center space-x-3 text-muted-foreground font-inter">
+              <CheckCircle className="h-5 w-5 text-accent" />
+              <span className="text-base">Free to try • No signup required • Instant results</span>
             </div>
           </div>
 
           {/* Right Column - Hero Image */}
           <div className="relative order-first lg:order-last animate-float">
-            <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-20 transform rotate-3"></div>
+            <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 transform rotate-3 scale-105"></div>
+            <div className="absolute inset-0 bg-gradient-shine rounded-3xl opacity-40 transform -rotate-1"></div>
             <img
               src={heroImage}
-              alt="Resume parsing visualization"
-              className="relative rounded-3xl shadow-premium w-full h-auto"
+              alt="Resume parsing visualization showcasing AI-powered document analysis"
+              className="relative rounded-3xl shadow-premium w-full h-auto border border-border/30"
             />
           </div>
         </div>
