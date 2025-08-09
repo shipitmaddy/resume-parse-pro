@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { UploadZone } from "@/components/ui/upload-zone";
-import heroImage from "@/assets/hero-image.jpg";
 import { CheckCircle, Zap, Shield, Clock } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,8 +47,8 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-20 pb-20 sm:pb-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Column - Content */}
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Hero Content */}
           <div className="space-y-8 sm:space-y-10 animate-fade-in-up">
             <div className="space-y-6 sm:space-y-8">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-playfair leading-[1.1] tracking-tight">
@@ -59,8 +58,8 @@ export const HeroSection = () => {
                 </span>
                 <span className="block text-foreground">Complete Profile</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed font-inter font-light max-w-xl">
-                Our AI instantly extracts and structures all your information from PDF or DOCX resumes. 
+              <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed font-inter font-light max-w-2xl mx-auto">
+                Our AI instantly extracts and structures all your information from PDF or DOCX resumes.
                 Complete your job application profile in minutes, not hours.
               </p>
             </div>
@@ -93,21 +92,10 @@ export const HeroSection = () => {
             {/* Upload Zone */}
             <UploadZone onFileSelect={handleFileSelect} isUploading={isUploading} />
             
-            <div className="flex items-center space-x-3 text-muted-foreground font-inter">
+            <div className="flex items-center justify-center space-x-3 text-muted-foreground font-inter">
               <CheckCircle className="h-5 w-5 text-accent" />
               <span className="text-base">Free to try • No signup required • Instant results</span>
             </div>
-          </div>
-
-          {/* Right Column - Hero Image */}
-          <div className="relative order-first lg:order-last animate-float">
-            <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 transform rotate-3 scale-105"></div>
-            <div className="absolute inset-0 bg-gradient-shine rounded-3xl opacity-40 transform -rotate-1"></div>
-            <img
-              src={heroImage}
-              alt="Resume parsing visualization showcasing AI-powered document analysis"
-              className="relative rounded-3xl shadow-premium w-full h-auto border border-border/30"
-            />
           </div>
         </div>
       </div>
