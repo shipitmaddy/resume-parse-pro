@@ -14,28 +14,154 @@ export type Database = {
   }
   public: {
     Tables: {
+      education: {
+        Row: {
+          created_at: string
+          degree: string
+          end_date: string | null
+          field_of_study: string | null
+          grade: string | null
+          id: string
+          institution: string
+          start_date: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          degree: string
+          end_date?: string | null
+          field_of_study?: string | null
+          grade?: string | null
+          id?: string
+          institution: string
+          start_date?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          degree?: string
+          end_date?: string | null
+          field_of_study?: string | null
+          grade?: string | null
+          id?: string
+          institution?: string
+          start_date?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      experience: {
+        Row: {
+          company: string
+          created_at: string
+          current_job: boolean | null
+          description: string | null
+          end_date: string | null
+          id: string
+          position: string
+          start_date: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          current_job?: boolean | null
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          position: string
+          start_date?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          current_job?: boolean | null
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          position?: string
+          start_date?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
+          address: string | null
           avatar_url: string | null
           created_at: string | null
+          current_ctc: number | null
+          current_location: string | null
+          date_of_birth: string | null
           display_name: string | null
+          email: string | null
+          expected_ctc: number | null
+          first_name: string | null
+          gender: string | null
+          github_url: string | null
           id: string
+          last_name: string | null
+          linkedin_url: string | null
+          notice_period: string | null
+          phone: string | null
+          portfolio_url: string | null
+          state: string | null
+          total_experience: number | null
           updated_at: string | null
           user_id: string | null
         }
         Insert: {
+          address?: string | null
           avatar_url?: string | null
           created_at?: string | null
+          current_ctc?: number | null
+          current_location?: string | null
+          date_of_birth?: string | null
           display_name?: string | null
+          email?: string | null
+          expected_ctc?: number | null
+          first_name?: string | null
+          gender?: string | null
+          github_url?: string | null
           id?: string
+          last_name?: string | null
+          linkedin_url?: string | null
+          notice_period?: string | null
+          phone?: string | null
+          portfolio_url?: string | null
+          state?: string | null
+          total_experience?: number | null
           updated_at?: string | null
           user_id?: string | null
         }
         Update: {
+          address?: string | null
           avatar_url?: string | null
           created_at?: string | null
+          current_ctc?: number | null
+          current_location?: string | null
+          date_of_birth?: string | null
           display_name?: string | null
+          email?: string | null
+          expected_ctc?: number | null
+          first_name?: string | null
+          gender?: string | null
+          github_url?: string | null
           id?: string
+          last_name?: string | null
+          linkedin_url?: string | null
+          notice_period?: string | null
+          phone?: string | null
+          portfolio_url?: string | null
+          state?: string | null
+          total_experience?: number | null
           updated_at?: string | null
           user_id?: string | null
         }
